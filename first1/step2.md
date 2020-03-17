@@ -11,9 +11,7 @@ For this we need to
 
 ## Creating the data directory
 
-```bash
-mkdir /mnt/data
-```
+`mkdir /mnt/data`{{copy}}
 
 ## Creating the PV
 
@@ -36,9 +34,9 @@ spec:
     path: "/mnt/data"
 ```
 
-Now create the PV using command ```bash kubectl create -f pv.yaml```
+Now create the PV using command `kubectl create -f pv.yaml`{{copy}}
 
-Verify that the PV is present using ```bash kubectl get pv```, you should see output similar to ```
+Verify that the PV is present using `bash kubectl get pv`{{copy}}, you should see output similar to ```
 NAME       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS    REASON   AGE
 local-pv   3Gi        RWO            Delete           Available           local-storage            1s
 ```.

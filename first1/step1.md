@@ -9,24 +9,18 @@ First, once your environment is created, we will check our nodes and then instal
 
 Check all nodes using command
 
-```sh
-kubectl get nodes
-```
+`kubectl get nodes`{{copy}}
 
 **Note**: In case only 1-node is currently working we will untaint that node
 
 We can untaint all nodes using the command
-```sh
-kubectl taint nodes node-role.kubernetes.io/master- --all
-```
+`kubectl taint nodes node-role.kubernetes.io/master- --all`{{copy}}
 
 ## Getting voting app source code
 
-```bash
-git clone https://github.com/dockersamples/example-voting-app
+`git clone https://github.com/dockersamples/example-voting-app`{{copy}}
 
-cd example-voting-app
-```
+`cd example-voting-app`{{copy}}
 
 
 
