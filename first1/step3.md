@@ -1,6 +1,6 @@
 
 # Starting the Voting App
 
-`kubectl create -f kube-deployment.yaml`{{copy}}
+`kubectl create -f kube-deployment.yml`{{copy}}
 
 

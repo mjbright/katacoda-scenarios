@@ -7,7 +7,7 @@ For this we need to
 - Make mult-node??
 - Create a physical volume mount directory on the master node
 - Create a PersistentVolume on the master node
-- Modify the definition of PersistentVolumeClaim in kube-deployment.yaml to specify the same storage class
+- Modify the definition of PersistentVolumeClaim in kube-deployment.yml to specify the same storage class
 
 ## Creating the data directory
 
@@ -36,17 +36,21 @@ spec:
 
 Now create the PV using command `kubectl create -f pv.yaml`{{copy}}
 
-Verify that the PV is present using `bash kubectl get pv`{{copy}}, you should see output similar to ```
+Verify that the PV is present using
+`kubectl get pv`{{copy}},
+you should see output similar to
+
+```
 NAME       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS    REASON   AGE
 local-pv   3Gi        RWO            Delete           Available           local-storage            1s
-```.
+```
 
 
 ## Specifying the PVC
 
-Now we must edit the kube-deployment.yaml file so that the PersistentVolumeClaim requests storage of class *local-storage* as specified in pv.yaml
+Now we must edit the kube-deployment.yml file so that the PersistentVolumeClaim requests storage of class *local-storage* as specified in pv.yaml
 
-Edit the kube-deployment.yaml file so that the PersistentVolumeClaim declaration look s like
+Edit the kube-deployment.yml file so that the PersistentVolumeClaim declaration look s like
 
 ```yaml
 apiVersion: v1
