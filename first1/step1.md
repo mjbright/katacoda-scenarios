@@ -23,4 +23,7 @@ We can untaint all nodes using the command
 `cd example-voting-app`{{copy}}
 
 
+#### Accessing Jupyter:
+Render port 8888:  https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com/
+
 
